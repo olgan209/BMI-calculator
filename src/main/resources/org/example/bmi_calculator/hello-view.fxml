@@ -7,11 +7,12 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar prefHeight="25.0" prefWidth="459.0">
+      <MenuBar prefHeight="25.0" prefWidth="439.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -26,9 +27,14 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Button layoutX="176.0" layoutY="221.0" mnemonicParsing="false" text="Calculate my BMI" />
-      <Label layoutX="140.0" layoutY="54.0" prefHeight="17.0" prefWidth="179.0" text="Welcome! It is a BMI calculator" textAlignment="CENTER" />
-      <TextField layoutX="154.0" layoutY="89.0" promptText="kg / lbs" />
-      <TextField layoutX="155.0" layoutY="134.0" promptText="m / in" />
+      <Button layoutX="38.0" layoutY="221.0" mnemonicParsing="false" text="Calculate my BMI (Metric units)" />
+      <Label fx:id="welcomeText" layoutX="68.0" layoutY="50.0" prefHeight="27.0" prefWidth="304.0" text="Welcome! It is a BMI calculator" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="weightTextField" layoutX="76.0" layoutY="108.0" prefHeight="25.0" prefWidth="288.0" promptText="kg / lbs" />
+      <TextField fx:id="heightTextField" layoutX="76.0" layoutY="160.0" prefHeight="25.0" prefWidth="288.0" promptText="m / in" />
+      <Button layoutX="226.0" layoutY="221.0" mnemonicParsing="false" onAction="#calculateEnUn" text="Calculate my BMI (English units)" />
    </children>
 </AnchorPane>
