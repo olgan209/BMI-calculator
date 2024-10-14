@@ -2,9 +2,16 @@ package org.example.bmi_calculator;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class HelloController {
     @FXML
@@ -17,8 +24,6 @@ public class HelloController {
     private TextField inchestTextField;
     @FXML
     private TextField poundsTextField;
-
-
     @FXML
     private Label welcomeText;
     @FXML
@@ -59,6 +64,22 @@ public class HelloController {
             welcomeText.setText("Overweight:\tbetween 25 and 29.9");
         } else if (bmi >= 30) {
             welcomeText.setText("Obese:\t30 or greater");
+        }
+    }
+
+    @FXML
+    protected void showHelp(ActionEvent event) {
+        try{
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("help-dialog.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Help");
+            stage.setScene(new Scene(root));
+
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.showAndWait();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

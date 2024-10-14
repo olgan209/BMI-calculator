@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="216.0" prefWidth="355.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bmi_calculator.HelloController">
+   <children>
+      <Label layoutX="28.0" prefHeight="229.0" prefWidth="297.0" text="Hello! Its a BMI calculator. First you need to choose in&#10;what units do you want to program calculate. If you &#10;choose metric units then enter your weight and height&#10;on the left side of a program and click the bottom &#10;&quot;Calculate my BMI(Metric units)&quot; button. &#10;Otherwise enter your weight in pounds and height&#10; in feet and inches then click &quot;Calculate my &#10;BMI(English metric)&quot;" textAlignment="CENTER">
+         <font>
+            <Font name="Georgia" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
