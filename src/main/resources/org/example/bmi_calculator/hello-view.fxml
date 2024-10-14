@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="281.0" prefWidth="439.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bmi_calculator.HelloController">
    <children>
       <MenuBar prefHeight="25.0" prefWidth="439.0">
         <menus>
@@ -27,14 +27,17 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Button layoutX="38.0" layoutY="221.0" mnemonicParsing="false" text="Calculate my BMI (Metric units)" />
+      <Button layoutX="38.0" layoutY="221.0" mnemonicParsing="false" onAction="#calculateMeUn" text="Calculate my BMI (Metric units)" />
       <Label fx:id="welcomeText" layoutX="68.0" layoutY="50.0" prefHeight="27.0" prefWidth="304.0" text="Welcome! It is a BMI calculator" textAlignment="CENTER">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="22.0" />
          </font>
       </Label>
-      <TextField fx:id="weightTextField" layoutX="76.0" layoutY="108.0" prefHeight="25.0" prefWidth="288.0" promptText="kg / lbs" />
-      <TextField fx:id="heightTextField" layoutX="76.0" layoutY="160.0" prefHeight="25.0" prefWidth="288.0" promptText="m / in" />
-      <Button layoutX="226.0" layoutY="221.0" mnemonicParsing="false" onAction="#calculateEnUn" text="Calculate my BMI (English units)" />
+      <TextField fx:id="kgTextField" layoutX="38.0" layoutY="96.0" prefHeight="25.0" prefWidth="181.0" promptText="kg " />
+      <TextField fx:id="mTextField" layoutX="38.0" layoutY="141.0" prefHeight="25.0" prefWidth="181.0" promptText="m" />
+      <Button fx:id="calculateButtonEU" layoutX="226.0" layoutY="221.0" mnemonicParsing="false" onAction="#calculateEnUn" text="Calculate my BMI (English units)" />
+      <TextField fx:id="poundsTextField" layoutX="226.0" layoutY="96.0" prefHeight="25.0" prefWidth="185.0" promptText="pounds" />
+      <TextField fx:id="feetTextField" layoutX="226.0" layoutY="141.0" prefHeight="25.0" prefWidth="185.0" promptText="feet" />
+      <TextField fx:id="inchestTextField" layoutX="226.0" layoutY="181.0" prefHeight="25.0" prefWidth="185.0" promptText="inches" />
    </children>
 </AnchorPane>
