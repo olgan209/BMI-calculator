@@ -1,13 +1,12 @@
 package org.example.bmi_calculator;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -28,6 +27,8 @@ public class HelloController {
     private Label welcomeText;
     @FXML
     private Button calculateButtonEU;
+    @FXML
+    private MenuBar menuBar;
 
     @FXML
     protected void calculateEnUn(){
@@ -81,5 +82,18 @@ public class HelloController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    protected void exitAction() {
+        Platform.exit();
+    }
+    @FXML
+    protected void clearFields(){
+        kgTextField.clear();
+        mTextField.clear();
+        feetTextField.clear();
+        inchestTextField.clear();
+        poundsTextField.clear();
+        welcomeText.setText("Welcome! It is a BMI calculator");
     }
 }
