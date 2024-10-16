@@ -15,8 +15,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem mnemonicParsing="false" onMenuValidation="#clearFields" text="Clear" />
-                  <MenuItem mnemonicParsing="false" onMenuValidation="#exitAction" text="Exit" />
+              <MenuItem mnemonicParsing="false" onAction="#clearFields" text="Clear" />
+                  <MenuItem mnemonicParsing="false" onAction="#exitAction" text="Exit" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
@@ -27,7 +27,7 @@
         </menus>
       </MenuBar>
       <Button layoutX="38.0" layoutY="221.0" mnemonicParsing="false" onAction="#calculateMeUn" text="Calculate my BMI (Metric units)" />
-      <Label fx:id="welcomeText" layoutX="68.0" layoutY="50.0" prefHeight="27.0" prefWidth="304.0" text="Welcome! It is a BMI calculator" textAlignment="CENTER">
+      <Label fx:id="welcomeText" alignment="CENTER" layoutX="37.0" layoutY="50.0" prefHeight="27.0" prefWidth="375.0" text="Welcome! It is a BMI calculator" textAlignment="CENTER">
          <font>
             <Font name="Berlin Sans FB Demi Bold" size="22.0" />
          </font>
